@@ -1,0 +1,26 @@
+schema_version = "1.3"
+
+[task]
+name = "sql-engine-from-scratch"
+description = "Build a working SQL database engine from scratch in C, including a B-tree storage backend, SQL parser, query planner, and executor. The engine must support CREATE TABLE, INSERT, SELECT (with WHERE, ORDER BY, LIMIT), UPDATE, DELETE, JOIN, and basic aggregations (COUNT, SUM, AVG, MIN, MAX). It must persist data to disk and handle concurrent reads. Performance gates require sub-second query execution on tables with 100k+ rows."
+
+[agent]
+timeout_sec = 72000
+user = "agent"
+
+[verifier]
+timeout_sec = 600
+environment_mode = "separate"
+
+[environment]
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+network_mode = "none"
+
+[metadata]
+author_name = "Ajay Mishra"
+difficulty = "very_hard"
+difficulty_explanation = "Requires implementing a complete database engine from scratch: B-tree data structures, SQL parsing, query planning and execution, disk-based persistence, and performance optimization — all within a single cohesive system. Estimated 15-20 hours for an experienced systems programmer."
+category = "systems_programming"
+tags = ["database", "sql", "b-tree", "parser", "systems", "c", "performance"]

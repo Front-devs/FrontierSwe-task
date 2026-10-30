@@ -1,0 +1,10 @@
+CREATE TABLE employees (id INTEGER, name TEXT, department TEXT, salary REAL);
+INSERT INTO employees VALUES (1, 'Alice Smith', 'Engineering', 95000.00);
+INSERT INTO employees VALUES (2, 'Bob Jones', 'Marketing', 72000.00);
+INSERT INTO employees VALUES (3, 'Carol White', 'Engineering', 105000.00);
+INSERT INTO employees VALUES (4, 'David Brown', 'Marketing', 68000.00);
+INSERT INTO employees VALUES (5, 'Eve Davis', 'Engineering', 115000.00);
+SELECT * FROM employees;
+SELECT * FROM employees WHERE department = 'Engineering';
+SELECT COUNT(*), AVG(salary) FROM employees WHERE department = 'Engineering';
+SELECT department, COUNT(*), AVG(salary) FROM employees GROUP BY department ORDER BY department;
